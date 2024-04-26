@@ -4,6 +4,8 @@ import AllCrafts from "../components/allCrafts/AllCrafts";
 import AddItem from "../components/addItem/AddItem";
 import Home from "../components/home/Home";
 import MyList from "../components/myList/MyList";
+import Login from "../components/login/Login";
+import Register from "../components/register/Register";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/myList",
         element: <MyList />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },

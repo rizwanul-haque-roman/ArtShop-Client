@@ -14,6 +14,9 @@ export default {
       fontFamily: {
         zilla: ['"Zilla Slab", serif'],
       },
+      backgroundImage: {
+        login: "url('/src/assets/banner-3.webp')",
+      },
     },
   },
   plugins: [daisyui],
