@@ -16,6 +16,7 @@ export default {
       },
       backgroundImage: {
         login: "url('/src/assets/banner-3.webp')",
+        error: "url('/src/assets/errorpage.png')",
         "slide-1": "url('/src/assets/banner-1.webp')",
         "slide-2": "url('/src/assets/banner-2.webp')",
         "slide-3": "url('/src/assets/banner-3.webp')",
