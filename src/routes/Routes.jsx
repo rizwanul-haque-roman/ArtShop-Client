@@ -7,6 +7,7 @@ import MyList from "../components/myList/MyList";
 import Login from "../components/login/Login";
 import Register from "../components/register/Register";
 import ErrorPage from "../components/error/ErrorPage";
+import Details from "../components/details/Details";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,12 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/details/:id",
+        element: <Details />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/paintings/${params.id}`),
       },
     ],
   },

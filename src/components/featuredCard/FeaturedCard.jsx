@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FeaturedCard = ({ painting }) => {
   useEffect(() => {
@@ -31,14 +32,16 @@ const FeaturedCard = ({ painting }) => {
             <p>Price: ${painting.price}</p>
             <div className="flex items-center gap-1">
               <p>Rating: {painting.rating}</p>
-              <FaStar />
+              <FaStar className="text-[#e79d2e]" />
             </div>
             <p>customizable: {painting.customization} </p>
           </div>
           <div className="card-actions justify-end">
-            <button className="btn text-xl bg-plt-four hover:bg-plt-five text-white">
-              View Details
-            </button>
+            <Link to={`/details/${painting._id}`}>
+              <button className="btn text-xl bg-plt-four hover:bg-plt-five text-white">
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
