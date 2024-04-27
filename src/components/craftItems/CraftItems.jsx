@@ -24,7 +24,7 @@ const CraftItems = ({ paintings }) => {
           special.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-6 my-24">
+      <div className="grid lg:grid-cols-2 gap-6 my-24">
         {paintings.map((painting) => (
           <FeaturedCard key={painting._id} painting={painting}></FeaturedCard>
         ))}

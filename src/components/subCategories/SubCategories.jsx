@@ -24,13 +24,22 @@ const SubCategories = () => {
 
   console.log(categories);
 
-  const settings = {
+  const settings_lg = {
     dots: true,
     infinite: true,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+  const settings_sm = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
     slidesToScroll: 1,
   };
 
@@ -59,11 +68,25 @@ const SubCategories = () => {
             </p>
           </div>
           <div
-            className="slider-container"
+            className="slider-container hidden lg:block"
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <Slider {...settings}>
+            <Slider {...settings_lg}>
+              {categories.map((categorie) => (
+                <CategoriesCard
+                  key={categorie._id}
+                  category={categorie}
+                ></CategoriesCard>
+              ))}
+            </Slider>
+          </div>
+          <div
+            className="slider-container block lg:hidden"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            <Slider {...settings_sm}>
               {categories.map((categorie) => (
                 <CategoriesCard
                   key={categorie._id}

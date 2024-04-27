@@ -13,17 +13,17 @@ const FeaturedCard = ({ painting }) => {
   return (
     <div>
       <div
-        className="card card-side bg-base-100 items-center shadow-xl p-6 border"
+        className="card flex flex-col lg:flex-row gap-6 card-side bg-base-100 items-center shadow-xl p-6 border"
         data-aos="fade-up"
         data-aos-duration="1500"
       >
         <img
-          className="w-1/3 mr-6"
+          className="lg:w-1/3 lg:mr-6"
           src={painting.image}
           alt="a painting is a frame"
         />
 
-        <div className=" ">
+        <div>
           <h2 className="card-title text-4xl text-plt-five">
             {painting.item_name}
           </h2>
