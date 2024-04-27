@@ -11,7 +11,7 @@ const CraftItems = ({ paintings }) => {
   return (
     <div className="w-11/12 lg:container mx-auto mt-6 lg:mt-24">
       <h1
-        className="text-4xl lg:text-5xl font-heading font-bold text-center my-6"
+        className="text-4xl lg:text-5xl text-plt-five font-heading font-bold text-center my-6"
         data-aos="fade-up"
         data-aos-duration="1500"
       >
