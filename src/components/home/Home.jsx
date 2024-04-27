@@ -3,6 +3,7 @@ import Banner from "../banner/Banner";
 import CraftItems from "../craftItems/CraftItems";
 import SubCategories from "../subCategories/SubCategories";
 import Testimonials from "../testimonials/Testimonials";
+import NewsLetter from "../newsLetter/NewsLetter";
 
 const Home = () => {
   const paintings = useLoaderData();
@@ -12,6 +13,7 @@ const Home = () => {
       <CraftItems paintings={paintings} />
       <SubCategories />
       <Testimonials />
+      <NewsLetter />
     </div>
   );
 };
