@@ -18,13 +18,13 @@ const CraftItems = ({ paintings }) => {
         Featured Art & Craft Items
       </h1>
       <div className="col-span-1" data-aos="fade-up" data-aos-duration="1500">
-        <p className="text-xl font-medium font-para my-6 w-2/3 mx-auto text-center">
+        <p className="text-xl font-medium font-para my-6 lg:w-2/3 mx-auto text-center">
           Browse our curated selection of art & crafts! Discover captivating
           paintings and drawings. Find the perfect gift for your home or someone
           special.
         </p>
       </div>
-      <div className="grid lg:grid-cols-2 gap-6 my-24">
+      <div className="grid lg:grid-cols-2 gap-6 my-12 lg:my-24">
         {paintings.map((painting) => (
           <FeaturedCard key={painting._id} painting={painting}></FeaturedCard>
         ))}

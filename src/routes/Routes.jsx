@@ -10,6 +10,7 @@ import ErrorPage from "../components/error/ErrorPage";
 import Details from "../components/details/Details";
 import PrivateRout from "../components/Private/PrivateRout";
 import Update from "../components/update/Update";
+import SubCategoryCollection from "../components/subCategoryCollection/SubCategoryCollection";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:3000/paintings/${params.id}`),
+      },
+      {
+        path: "/subCategory",
+        element: <SubCategoryCollection />,
       },
     ],
   },

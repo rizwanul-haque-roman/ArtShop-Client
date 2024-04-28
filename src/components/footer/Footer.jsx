@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-base-200 font-zilla">
-      <footer className="footer items-center text-lg container py-10 mx-auto bg-base-200 text-base-content">
+      <footer className="footer items-center text-lg w-10/12 lg:container py-10 mx-auto bg-base-200 text-base-content">
         <aside>
           <img className="w-1/2" src={logo} alt="" />
           <h4 className="text-3xl font-bold">Art Shop</h4>

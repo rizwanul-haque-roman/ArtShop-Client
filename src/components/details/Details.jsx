@@ -5,11 +5,11 @@ const Details = () => {
   const painting = useLoaderData();
   return (
     <div className="w-11/12 lg:container mx-auto font-zilla">
-      <div className="flex justify-center items-end gap-16 my-10">
+      <div className="flex flex-col lg:flex-row justify-center items-end gap-16 my-10">
         <img
           src={painting.image}
           alt=""
-          className="rounded-2xl w-1/3 p-12 bg-plt-one"
+          className="rounded-2xl lg:w-1/3 p-12 bg-plt-one"
         />
         <div>
           <h2 className="text-plt-five text-3xl lg:text-6xl font-bold pb-3">

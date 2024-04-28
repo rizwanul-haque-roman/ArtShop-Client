@@ -61,14 +61,14 @@ const SubCategories = () => {
             data-aos="fade-up"
             data-aos-duration="1500"
           >
-            <p className="text-xl font-medium font-para my-6 w-2/3 mx-auto text-center">
+            <p className="text-xl font-medium font-para my-6 lg:w-2/3 mx-auto text-center">
               Browse different categories of art & crafts! Discover captivating
               paintings and drawings. Browse through all the collections to find
               your perfect piece.
             </p>
           </div>
           <div
-            className="slider-container hidden lg:block"
+            className="slider-container hidden lg:display"
             data-aos="fade-left"
             data-aos-duration="1500"
           >

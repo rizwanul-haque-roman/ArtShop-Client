@@ -6,10 +6,13 @@ const AllCrafts = () => {
   const paintings = useLoaderData();
   return (
     <div>
-      <div className="font-zilla">
+      <div className="font-zilla w-11/12 lg:container mx-auto">
         <h1 className="text-4xl lg:text-6xl text-black  font-heading font-bold text-left my-6">
           View All of Our{" "}
-          <span className="text-plt-five">
+          <span className="text-plt-five md:hidden lg:hidden">
+            Paintings & Drawings
+          </span>
+          <span className="text-plt-five hidden md:block lg:block">
             <Typewriter
               words={[
                 "Watercolour Paintings",
@@ -28,13 +31,13 @@ const AllCrafts = () => {
             />
           </span>
         </h1>
-        <p className="text-2xl font-medium font-para my-6 w-2/3 text-left">
+        <p className="text-2xl font-medium font-para my-6 lg:w-2/3 text-left">
           Browse all the paintings from different artists. Discover a variety of
           styles, from landscapes to abstracts, to find your perfect piece or
           ignite your artistic spark.
         </p>
       </div>
-      <div className="overflow-x-auto my-24 border-2 border-plt-five rounded-2xl p-6 font-zilla">
+      <div className="overflow-x-auto w-11/12 lg:container mx-auto my-12 lg:my-24 border-2 border-plt-five rounded-2xl p-6 font-zilla">
         <table className="table">
           {/* head */}
           <thead>

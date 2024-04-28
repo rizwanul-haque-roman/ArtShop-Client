@@ -39,7 +39,7 @@ const MyListCard = ({ painting, myPaintings, setMyPaintings }) => {
 
   return (
     <div>
-      <div className="card w-auto h-[65vh] flex flex-col justify-between gap-6 card-side bg-base-100 shadow-xl p-6 border">
+      <div className="card w-auto md:h-[50vh] lg:h-[65vh] flex flex-col justify-between gap-6 card-side bg-base-100 shadow-xl p-6 border">
         <img
           className=" rounded-xl"
           src={painting.image}

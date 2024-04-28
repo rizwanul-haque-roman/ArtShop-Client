@@ -66,13 +66,13 @@ const Update = () => {
   };
 
   return (
-    <div className="container mx-auto">
-      <div className="font-zilla bg-plt-one px-28 py-12 flex flex-col justify-center items-center mb-24 rounded-2xl">
-        <h1 className="text-center text-5xl font-bold">
+    <div className="w-11/12 lg:container mx-auto">
+      <div className="font-zilla bg-plt-one p-6 lg:px-28 lg:py-12 flex flex-col justify-center items-center mb-24 rounded-2xl">
+        <h1 className="text-center text-4xl lg:text-5xl font-bold">
           Update Your Published<span className="text-plt-five"> ArtWork</span>
         </h1>
         <form className="w-full" onSubmit={handleSubmit}>
-          <div className="flex gap-8 my-6">
+          <div className="flex flex-col md:flex-row lg:flex-row md:gap-6 lg:gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
                 <span className="label-text text-lg font-semibold">
@@ -111,7 +111,7 @@ const Update = () => {
               </select>
             </label>
           </div>
-          <div className="flex gap-8 my-6">
+          <div className="flex flex-col md:flex-row lg:flex-row md:gap-6 lg:gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
                 <span className="label-text text-lg font-semibold">
@@ -137,7 +137,7 @@ const Update = () => {
               />
             </label>
           </div>
-          <div className="flex gap-8 my-6">
+          <div className="flex flex-col md:flex-row lg:flex-row md:gap-6 lg:gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
                 <span className="label-text text-lg font-semibold">Rating</span>
@@ -168,7 +168,7 @@ const Update = () => {
               </select>
             </label>
           </div>
-          <div className="flex gap-8 my-6">
+          <div className="flex flex-col md:flex-row lg:flex-row md:gap-6 lg:gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
                 <span className="label-text text-lg font-semibold">

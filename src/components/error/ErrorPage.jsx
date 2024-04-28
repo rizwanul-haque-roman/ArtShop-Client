@@ -5,7 +5,7 @@ const ErrorPage = () => {
   return (
     <div className=" bg-error min-h-screen bg-no-repeat bg-cover bg-center font-zilla">
       <div className="flex flex-col h-screen justify-center items-center pt-[450px]">
-        <h1 className="text-6xl font-bold ">
+        <h1 className="w-11/12 lg:container mx-auto text-4xl lg:text-6xl font-bold ">
           We couldn&apos;t find what you were looking for.
         </h1>
         <Link to={"/"}>
