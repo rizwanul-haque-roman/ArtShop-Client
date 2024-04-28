@@ -78,7 +78,9 @@ const AddItem = () => {
           <div className="flex gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">Painting Name</span>
+                <span className="label-text text-lg font-semibold">
+                  Painting Name
+                </span>
               </div>
               <input
                 type="text"
@@ -89,7 +91,9 @@ const AddItem = () => {
             </label>
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">Sub-Category</span>
+                <span className="label-text text-lg font-semibold">
+                  Sub-Category
+                </span>
               </div>
               <select
                 onChange={handleSubCategory}
@@ -112,7 +116,9 @@ const AddItem = () => {
           <div className="flex gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">Short Description</span>
+                <span className="label-text text-lg font-semibold">
+                  Short Description
+                </span>
               </div>
               <input
                 type="text"
@@ -123,7 +129,7 @@ const AddItem = () => {
             </label>
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">Price</span>
+                <span className="label-text text-lg font-semibold">Price</span>
               </div>
               <input
                 type="number"
@@ -136,7 +142,7 @@ const AddItem = () => {
           <div className="flex gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">Rating</span>
+                <span className="label-text text-lg font-semibold">Rating</span>
               </div>
               <input
                 type="text"
@@ -147,7 +153,9 @@ const AddItem = () => {
             </label>
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">Customization</span>
+                <span className="label-text text-lg font-semibold">
+                  Customization
+                </span>
               </div>
               <select
                 onChange={handleCustomization}
@@ -164,7 +172,9 @@ const AddItem = () => {
           <div className="flex gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">Processing time</span>
+                <span className="label-text text-lg font-semibold">
+                  Processing time
+                </span>
               </div>
               <input
                 type="text"
@@ -175,7 +185,9 @@ const AddItem = () => {
             </label>
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">Stock Status</span>
+                <span className="label-text text-lg font-semibold">
+                  Stock Status
+                </span>
               </div>
               <select
                 onChange={handleStockStatus}
@@ -192,7 +204,9 @@ const AddItem = () => {
           <div className="flex gap-8 my-6">
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">User Name</span>
+                <span className="label-text text-lg font-semibold">
+                  User Name
+                </span>
               </div>
               <input
                 type="text"
@@ -203,7 +217,9 @@ const AddItem = () => {
             </label>
             <label className="form-control w-full">
               <div className="label">
-                <span className="label-text">User Email</span>
+                <span className="label-text text-lg font-semibold">
+                  User Email
+                </span>
               </div>
               <input
                 type="email"
@@ -215,7 +231,7 @@ const AddItem = () => {
           </div>
           <div>
             <label className="form-control w-full">
-              <div className="label">Painting URL</div>
+              <div className="label text-lg font-semibold">Painting URL</div>
               <input
                 type="text"
                 name="image"

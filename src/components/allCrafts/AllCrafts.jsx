@@ -28,13 +28,11 @@ const AllCrafts = () => {
             />
           </span>
         </h1>
-        <div className="col-span-1">
-          <p className="text-2xl font-medium font-para my-6 w-2/3 text-left">
-            Browse all the paintings from different artists. Discover a variety
-            of styles, from landscapes to abstracts, to find your perfect piece
-            or ignite your artistic spark.
-          </p>
-        </div>
+        <p className="text-2xl font-medium font-para my-6 w-2/3 text-left">
+          Browse all the paintings from different artists. Discover a variety of
+          styles, from landscapes to abstracts, to find your perfect piece or
+          ignite your artistic spark.
+        </p>
       </div>
       <div className="overflow-x-auto my-24 border-2 border-plt-five rounded-2xl p-6 font-zilla">
         <table className="table">
