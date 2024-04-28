@@ -42,7 +42,6 @@ const AddItem = () => {
       user_email,
     };
     console.log(painting);
-
     // send data to the serever
   };
 

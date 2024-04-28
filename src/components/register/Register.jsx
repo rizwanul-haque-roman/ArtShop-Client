@@ -2,12 +2,16 @@ import { Link } from "react-router-dom";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { IoMdPhotos } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../auth/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
 
 const Register = () => {
   const [viewPass, setVewPass] = useState(true);
   const [viewConfirmPass, setVewConfirmPass] = useState(true);
+  const { registerUser, setReload } = useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,6 +37,24 @@ const Register = () => {
     }
 
     console.log(name, url, email, pass, confirmPass);
+
+    registerUser(email, pass, name, url)
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire("Registration Successful");
+        updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: url,
+        })
+          .then(() => {
+            console.log("Profile updated!");
+            setReload(true);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      })
+      .catch((error) => Swal.fire(error.message));
   };
 
   return (
@@ -126,7 +148,7 @@ const Register = () => {
             <input type="checkbox" name="check" required />
             <h3 className="text-black">Accept terms & conditions</h3>
           </div>
-          <button className="btn bg-plt-two hover:bg-[#a9a7a5] border-0 text-2xl text-black">
+          <button className="btn bg-plt-four hover:text-plt-five border-0 text-2xl text-white">
             Register
           </button>
           <p className="text-black text-center font-medium">

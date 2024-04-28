@@ -3,10 +3,13 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../auth/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const [viewPass, setVewPass] = useState(true);
+  const { loginUser, googleLogIn, gitHubLogIn } = useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -15,6 +18,31 @@ const Login = () => {
     const pass = form.pass.value;
 
     console.log(email, pass);
+
+    loginUser(email, pass)
+      .then((result) => {
+        console.log(result);
+        Swal.fire("Login Successful");
+      })
+      .catch((error) => Swal.fire(error.message));
+  };
+
+  const loginWithGoogle = () => {
+    googleLogIn()
+      .then((result) => {
+        console.log(result);
+        Swal.fire("Login Successful");
+      })
+      .catch((error) => Swal.fire(error.message));
+  };
+
+  const loginWithGitHub = () => {
+    gitHubLogIn()
+      .then((result) => {
+        console.log(result);
+        Swal.fire("Login Successful");
+      })
+      .catch((error) => Swal.fire(error.message));
   };
 
   return (
@@ -67,7 +95,7 @@ const Login = () => {
           <a href="#" className="text-black font-medium hover:underline">
             Forgot Password?
           </a>
-          <button className="btn bg-plt-two hover:bg-[#a9a7a5] border-0 text-2xl text-black">
+          <button className="btn bg-plt-four hover:text-plt-five border-0 text-2xl text-white">
             Login
           </button>
           <p className="text-black text-center font-medium">
@@ -82,14 +110,20 @@ const Login = () => {
             </div>
             <div className="flex gap-6 text-2xl justify-center mt-7">
               <div className="bg-white px-3 py-2 rounded-full">
-                <Link className="flex gap-2 items-center">
+                <div
+                  onClick={loginWithGoogle}
+                  className="flex gap-2 items-center"
+                >
                   <FcGoogle /> <p className="text-base">Google</p>
-                </Link>
+                </div>
               </div>
               <div className="bg-white px-3 py-2 rounded-full">
-                <Link className="flex gap-2 items-center">
+                <div
+                  onClick={loginWithGitHub}
+                  className="flex gap-2 items-center"
+                >
                   <FaGithub /> <p className="text-base">GitHub</p>
-                </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -1,7 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../auth/AuthProvider";
+import profile from "../../assets/profile-icon.png";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
+  const { user, logOut, loader } = useContext(AuthContext);
   const links = (
     <>
       <li>
@@ -47,7 +52,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="mt-4 container mx-auto text-plt-three font-zilla">
+    <div className="mt-6 container mx-auto text-plt-three font-zilla">
       <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -82,7 +87,47 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3 ">
-          <div className="flex gap-3">
+          {user ? (
+            <div className="flex items-center gap-3">
+              {/* <div className="tooltip" data-tip={user.displayName}> */}
+              <a
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={user.displayName}
+                data-tooltip-place="top"
+              >
+                <div className="avatar w-10 border border-plt-four p-1 rounded-full ">
+                  <div className="w-full rounded-full mx-auto">
+                    <img src={user.photoURL ? user.photoURL : profile} />
+                  </div>
+                </div>
+              </a>
+              <Tooltip id="my-tooltip" />
+              {/* </div> */}
+              <button
+                onClick={logOut}
+                className="btn btn-sm text-white bg-plt-four hover:text-plt-five text-lg"
+              >
+                Log Out
+              </button>
+            </div>
+          ) : loader ? (
+            <span className="loading loading-infinity loading-lg"></span>
+          ) : (
+            <div className="flex gap-3">
+              <Link to={"/login"}>
+                <button className="btn btn-sm bg-plt-four hover:text-plt-five text-lg text-white">
+                  Login
+                </button>
+              </Link>
+              <p className="font-para text-xl font-semibold">Or</p>
+              <Link to={"/register"}>
+                <button className="btn btn-sm bg-plt-four hover:text-plt-five text-lg text-white">
+                  Register
+                </button>
+              </Link>
+            </div>
+          )}
+          {/* <div className="flex gap-3">
             <Link to={"/login"}>
               <button className="btn btn-sm bg-plt-four hover:text-plt-five text-lg text-white">
                 Login
@@ -94,7 +139,7 @@ const Navbar = () => {
                 Register
               </button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
