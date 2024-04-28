@@ -7,11 +7,29 @@ const AllCrafts = () => {
   return (
     <div>
       <div className="font-zilla">
-        <h1 className="text-4xl lg:text-6xl text-plt-five font-heading font-bold text-center my-6">
-          View All of Our Art & Craft Items
+        <h1 className="text-4xl lg:text-6xl text-black  font-heading font-bold text-left my-6">
+          View All of Our{" "}
+          <span className="text-plt-five">
+            <Typewriter
+              words={[
+                "Watercolour Paintings",
+                "Portrait Drawings",
+                "Charcoal Sketchings",
+                "Landscape Paintings",
+                "Oil Paintings",
+                "Cartoon Drawings",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="_"
+              typeSpeed={100}
+              deleteSpeed={100}
+              delaySpeed={1000}
+            />
+          </span>
         </h1>
         <div className="col-span-1">
-          <p className="text-2xl font-medium font-para my-6 w-2/3 mx-auto text-center">
+          <p className="text-2xl font-medium font-para my-6 w-2/3 text-left">
             Browse all the paintings from different artists. Discover a variety
             of styles, from landscapes to abstracts, to find your perfect piece
             or ignite your artistic spark.
