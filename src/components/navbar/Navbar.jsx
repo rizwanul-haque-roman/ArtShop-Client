@@ -89,7 +89,6 @@ const Navbar = () => {
         <div className="navbar-end gap-3 ">
           {user ? (
             <div className="flex items-center gap-3">
-              {/* <div className="tooltip" data-tip={user.displayName}> */}
               <a
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content={user.displayName}
@@ -102,7 +101,6 @@ const Navbar = () => {
                 </div>
               </a>
               <Tooltip id="my-tooltip" />
-              {/* </div> */}
               <button
                 onClick={logOut}
                 className="btn btn-sm text-white bg-plt-four hover:text-plt-five text-lg"
@@ -119,7 +117,7 @@ const Navbar = () => {
                   Login
                 </button>
               </Link>
-              <p className="font-para text-xl font-semibold">Or</p>
+              <p className=" text-xl font-semibold">Or</p>
               <Link to={"/register"}>
                 <button className="btn btn-sm bg-plt-four hover:text-plt-five text-lg text-white">
                   Register
@@ -127,19 +125,6 @@ const Navbar = () => {
               </Link>
             </div>
           )}
-          {/* <div className="flex gap-3">
-            <Link to={"/login"}>
-              <button className="btn btn-sm bg-plt-four hover:text-plt-five text-lg text-white">
-                Login
-              </button>
-            </Link>
-            <p className=" text-xl font-semibold">Or</p>
-            <Link to={"/register"}>
-              <button className="btn btn-sm bg-plt-four hover:text-plt-five text-lg text-white">
-                Register
-              </button>
-            </Link>
-          </div> */}
         </div>
       </div>
     </div>
