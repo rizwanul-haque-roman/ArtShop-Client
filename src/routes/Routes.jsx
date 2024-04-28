@@ -9,6 +9,7 @@ import Register from "../components/register/Register";
 import ErrorPage from "../components/error/ErrorPage";
 import Details from "../components/details/Details";
 import PrivateRout from "../components/Private/PrivateRout";
+import Update from "../components/update/Update";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,16 @@ const router = createBrowserRouter([
         element: (
           <PrivateRout>
             <Details />
+          </PrivateRout>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/paintings/${params.id}`),
+      },
+      {
+        path: "/update/:id",
+        element: (
+          <PrivateRout>
+            <Update />
           </PrivateRout>
         ),
         loader: ({ params }) =>

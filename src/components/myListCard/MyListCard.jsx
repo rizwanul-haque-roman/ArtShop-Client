@@ -1,8 +1,42 @@
 import PropTypes from "prop-types";
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const MyListCard = ({ painting }) => {
+const MyListCard = ({ painting, myPaintings, setMyPaintings }) => {
+  const handleDelete = (id) => {
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: `${painting.item_name} will be deleted . You won't be able to revert this!`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:3000/paintings/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your Painting has been deleted.",
+                icon: "success",
+              });
+
+              const remaining = myPaintings.filter((item) => item._id !== id);
+              setMyPaintings(remaining);
+            }
+          });
+      }
+    });
+  };
+
   return (
     <div>
       <div className="card w-auto h-[65vh] flex flex-col justify-between gap-6 card-side bg-base-100 shadow-xl p-6 border">
@@ -44,7 +78,10 @@ const MyListCard = ({ painting }) => {
                 Update
               </button>
             </Link>
-            <button className="btn text-xl bg-[red] hover:bg-[#b61212] text-white">
+            <button
+              onClick={() => handleDelete(painting._id)}
+              className="btn text-xl bg-[red] hover:bg-[#b61212] text-white"
+            >
               Delete
             </button>
           </div>
@@ -56,6 +93,8 @@ const MyListCard = ({ painting }) => {
 
 MyListCard.propTypes = {
   painting: PropTypes.object,
+  myPaintings: PropTypes.array,
+  setMyPaintings: PropTypes.func,
 };
 
 export default MyListCard;

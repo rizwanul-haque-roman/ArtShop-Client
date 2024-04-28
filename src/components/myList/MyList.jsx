@@ -38,7 +38,12 @@ const MyList = () => {
             </div>
             <div className="grid grid-cols-3 gap-6 my-24">
               {myPaintings.map((painting) => (
-                <MyListCard key={painting._id} painting={painting} />
+                <MyListCard
+                  key={painting._id}
+                  painting={painting}
+                  myPaintings={myPaintings}
+                  setMyPaintings={setMyPaintings}
+                />
               ))}
             </div>
           </div>
