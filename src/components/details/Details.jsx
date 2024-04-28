@@ -9,13 +9,13 @@ const Details = () => {
         <img
           src={painting.image}
           alt=""
-          className="rounded-2xl w-1/4 p-12 bg-plt-one"
+          className="rounded-2xl w-1/3 p-12 bg-plt-one"
         />
         <div>
           <h2 className="text-plt-five text-3xl lg:text-6xl font-bold pb-3">
             {painting.item_name}
           </h2>
-          <p className=" font-medium text-xl">
+          <p className=" font-medium text-xl my-2">
             <span className="font-bold text-plt-five">Subcategory:</span>{" "}
             {painting.subcategory_Name}
           </p>
@@ -23,7 +23,7 @@ const Details = () => {
             <span className="font-bold text-plt-five">Description:</span>{" "}
             {painting.short_description}
           </p>
-          <div className="text-xl font-medium mt-6">
+          <div className="text-xl font-medium mt-3">
             <p>
               <span className="font-bold text-plt-five">Price:</span> $
               {painting.price}

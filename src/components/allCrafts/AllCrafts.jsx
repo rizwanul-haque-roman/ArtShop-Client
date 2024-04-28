@@ -44,6 +44,7 @@ const AllCrafts = () => {
               <th>SL NO</th>
               <th>Preview</th>
               <th>Name</th>
+              <th>Publisher</th>
               <th>Price</th>
               <th>Rating</th>
               <th>Action</th>
@@ -58,6 +59,7 @@ const AllCrafts = () => {
                   <img className="h-[10vh]" src={painting.image} alt="" />
                 </td>
                 <td>{painting.item_name}</td>
+                <td>{painting.user_name}</td>
                 <td>${painting.price}</td>
                 <td>
                   <div className="flex items-center gap-1">

@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../auth/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddItem = () => {
   const [subcategory_Name, setSubcategory_Name] = useState("");
   const [customization, setCustomization] = useState("");
   const [stockStatus, setStockStatus] = useState("");
+  const { user } = useContext(AuthContext);
 
   const handleSubCategory = (event) => {
     setSubcategory_Name(event.target.value);
@@ -42,7 +45,27 @@ const AddItem = () => {
       user_email,
     };
     console.log(painting);
-    // send data to the serever
+
+    // sending data to the serever
+    fetch("http://localhost:3000/paintings", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(painting),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Painting added successfully",
+            icon: "success",
+            confirmButtonText: "ok",
+          });
+        }
+      });
   };
 
   return (
@@ -174,6 +197,7 @@ const AddItem = () => {
               <input
                 type="text"
                 name="user_name"
+                value={user.displayName}
                 className="input input-bordered w-full"
               />
             </label>
@@ -184,6 +208,7 @@ const AddItem = () => {
               <input
                 type="email"
                 name="user_email"
+                value={user.email}
                 className="input input-bordered w-full"
               />
             </label>
