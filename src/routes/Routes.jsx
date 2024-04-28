@@ -8,6 +8,7 @@ import Login from "../components/login/Login";
 import Register from "../components/register/Register";
 import ErrorPage from "../components/error/ErrorPage";
 import Details from "../components/details/Details";
+import PrivateRout from "../components/Private/PrivateRout";
 
 const router = createBrowserRouter([
   {
@@ -27,11 +28,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/addItem",
-        element: <AddItem />,
+        element: (
+          <PrivateRout>
+            <AddItem />
+          </PrivateRout>
+        ),
       },
       {
         path: "/myList",
-        element: <MyList />,
+        element: (
+          <PrivateRout>
+            <MyList />
+          </PrivateRout>
+        ),
       },
       {
         path: "/login",
@@ -43,7 +52,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details />,
+        element: (
+          <PrivateRout>
+            <Details />
+          </PrivateRout>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:3000/paintings/${params.id}`),
       },

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaRegEye } from "react-icons/fa6";
@@ -10,6 +10,8 @@ import Swal from "sweetalert2";
 const Login = () => {
   const [viewPass, setVewPass] = useState(true);
   const { loginUser, googleLogIn, gitHubLogIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -23,6 +25,7 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         Swal.fire("Login Successful");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => Swal.fire(error.message));
   };
@@ -32,6 +35,7 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         Swal.fire("Login Successful");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => Swal.fire(error.message));
   };
@@ -41,6 +45,7 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         Swal.fire("Login Successful");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => Swal.fire(error.message));
   };
@@ -110,20 +115,20 @@ const Login = () => {
             </div>
             <div className="flex gap-6 text-2xl justify-center mt-7">
               <div className="bg-white px-3 py-2 rounded-full">
-                <div
+                <Link
                   onClick={loginWithGoogle}
                   className="flex gap-2 items-center"
                 >
                   <FcGoogle /> <p className="text-base">Google</p>
-                </div>
+                </Link>
               </div>
               <div className="bg-white px-3 py-2 rounded-full">
-                <div
+                <Link
                   onClick={loginWithGitHub}
                   className="flex gap-2 items-center"
                 >
                   <FaGithub /> <p className="text-base">GitHub</p>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

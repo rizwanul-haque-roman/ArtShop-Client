@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { IoMdPhotos } from "react-icons/io";
@@ -12,6 +12,8 @@ const Register = () => {
   const [viewPass, setVewPass] = useState(true);
   const [viewConfirmPass, setVewConfirmPass] = useState(true);
   const { registerUser, setReload } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -53,6 +55,7 @@ const Register = () => {
           .catch((error) => {
             console.error(error);
           });
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => Swal.fire(error.message));
   };
