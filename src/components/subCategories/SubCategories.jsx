@@ -68,7 +68,7 @@ const SubCategories = () => {
             </p>
           </div>
           <div
-            className="slider-container hidden lg:display"
+            className="slider-container hidden lg:block"
             data-aos="fade-left"
             data-aos-duration="1500"
           >
@@ -81,19 +81,21 @@ const SubCategories = () => {
               ))}
             </Slider>
           </div>
-          <div
-            className="slider-container block lg:hidden"
-            data-aos="fade-left"
-            data-aos-duration="1500"
-          >
-            <Slider {...settings_sm}>
-              {categories.map((categorie) => (
-                <CategoriesCard
-                  key={categorie._id}
-                  category={categorie}
-                ></CategoriesCard>
-              ))}
-            </Slider>
+          <div className="display lg:hidden">
+            <div
+              className="slider-container"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              <Slider {...settings_sm}>
+                {categories.map((categorie) => (
+                  <CategoriesCard
+                    key={categorie._id}
+                    category={categorie}
+                  ></CategoriesCard>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       )}

@@ -58,7 +58,7 @@ const MyList = () => {
           </div>
         </div>
       ) : (
-        <div className="min-h-[70vh] md:min-h-[50vh] font-zilla flex flex-col justify-center items-center ">
+        <div className="min-h-[70vh]  font-zilla flex flex-col justify-center items-center ">
           <h1 className="text-4xl lg:text-6xl text-black  font-heading font-bold my-6">
             You have not added any{" "}
             <span className="text-plt-five"> Paintings</span>

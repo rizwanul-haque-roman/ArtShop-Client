@@ -4,13 +4,13 @@ import Swal from "sweetalert2";
 
 const Update = () => {
   const painting = useLoaderData();
-  const [subcategory_Name, setSubcategory_Name] = useState("");
+  const [subcategory_Name, setCubcategory_Name] = useState("");
   const [customization, setCustomization] = useState("");
   const [stockStatus, setStockStatus] = useState("");
   const { _id } = painting;
 
   const handleSubCategory = (event) => {
-    setSubcategory_Name(event.target.value);
+    setCubcategory_Name(event.target.value);
   };
 
   const handleCustomization = (event) => {
@@ -94,7 +94,6 @@ const Update = () => {
               </div>
               <select
                 onChange={handleSubCategory}
-                defaultValue={painting.subcategory_Name}
                 className="select select-bordered w-full"
               >
                 <option disabled selected>
@@ -157,7 +156,6 @@ const Update = () => {
               </div>
               <select
                 onChange={handleCustomization}
-                defaultValue={painting.customization}
                 className="select select-bordered w-full"
               >
                 <option disabled selected>
@@ -190,7 +188,6 @@ const Update = () => {
               </div>
               <select
                 onChange={handleStockStatus}
-                defaultValue={painting.stockStatus}
                 className="select select-bordered w-full"
               >
                 <option disabled selected>

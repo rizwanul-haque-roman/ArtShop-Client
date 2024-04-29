@@ -53,6 +53,12 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+        path: "/subcategory/:subcategory",
+        element: <SubCategoryCollection />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/subcategory/${params.subcategory}`),
+      },
+      {
         path: "/details/:id",
         element: (
           <PrivateRout>
@@ -71,10 +77,6 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:3000/paintings/${params.id}`),
-      },
-      {
-        path: "/subCategory",
-        element: <SubCategoryCollection />,
       },
     ],
   },

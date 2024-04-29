@@ -14,7 +14,8 @@ const CategoriesCard = ({ category }) => {
           </h2>
           <p>{category.origin}</p>
           <div className="card-actions">
-            <Link to={"/subCategory"}>
+            <Link to={`/subcategory/${category.subcategory_name} `}>
+              {/* ${category.subcategory_name} */}
               <button className="btn text-xl bg-plt-four hover:bg-plt-five text-white">
                 Browse Collection
               </button>
