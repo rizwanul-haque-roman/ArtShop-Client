@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import CollectionCard from "../collectionCard/CollectionCard";
 
 const SubCategoryCollection = () => {
   const subcategory = useLoaderData();
@@ -20,6 +21,11 @@ const SubCategoryCollection = () => {
           </span>{" "}
           subcategory from different artists.
         </p>
+      </div>
+      <div className="my-12 lg:my-24 font-zilla grid gap-6">
+        {subcategory.map((painting) => (
+          <CollectionCard key={painting._id} painting={painting} />
+        ))}
       </div>
     </div>
   );

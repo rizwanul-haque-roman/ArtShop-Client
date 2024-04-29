@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Autoplay, Mousewheel } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import scroll from "../../assets/scroll.png";
 
 const Banner = () => {
@@ -17,12 +17,11 @@ const Banner = () => {
         direction={"horizontal"}
         slidesPerView={1}
         spaceBetween={30}
-        mousewheel={true}
         loop={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination, Mousewheel, Autoplay]}
+        modules={[Pagination, Autoplay]}
         autoplay={{
           delay: 3000,
         }}

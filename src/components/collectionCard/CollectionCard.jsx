@@ -1,16 +1,15 @@
 import Aos from "aos";
-import "aos/dist/aos.css";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const FeaturedCard = ({ painting }) => {
+const CollectionCard = ({ painting }) => {
   useEffect(() => {
     Aos.init();
   }, []);
   return (
-    <div>
+    <div className="w-11/12 lg:container mx-auto">
       <div
         className="card flex flex-col lg:flex-row gap-6 card-side bg-base-100 items-center shadow-xl p-6 border"
         data-aos="fade-up"
@@ -26,14 +25,22 @@ const FeaturedCard = ({ painting }) => {
           <h2 className="card-title text-4xl text-plt-five">
             {painting.item_name}
           </h2>
-          <p className="text-xl">{painting.short_description}</p>
-          <div className="text-xl font-medium mt-6">
-            <p>Price: ${painting.price}</p>
+          <p className="text-2xl font-bold">{painting.subcategory_Name} </p>
+          <p className="text-xl py-3">{painting.short_description}</p>
+          <div className="flex flex-col lg:flex-row gap-3 lg:gap-6 text-xl mt-3">
+            <p>
+              <span className="font-bold">Price:</span> ${painting.price}
+            </p>
             <div className="flex items-center gap-1">
-              <p>Rating: {painting.rating}</p>
+              <p>
+                <span className="font-bold">Rating:</span> {painting.rating}
+              </p>
               <FaStar className="text-[#e79d2e]" />
             </div>
-            <p>customizable: {painting.customization} </p>
+            <p>
+              <span className="font-bold">Processing Time:</span>{" "}
+              {painting.processing_time}{" "}
+            </p>
           </div>
           <div className="card-actions justify-end">
             <Link to={`/details/${painting._id}`}>
@@ -48,8 +55,8 @@ const FeaturedCard = ({ painting }) => {
   );
 };
 
-FeaturedCard.propTypes = {
+CollectionCard.propTypes = {
   painting: PropTypes.object,
 };
 
-export default FeaturedCard;
+export default CollectionCard;
