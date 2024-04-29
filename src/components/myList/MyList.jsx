@@ -17,7 +17,9 @@ const MyList = () => {
   console.log("paintings:", paintings);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/myPaintings?email=${email}`)
+    fetch(
+      `https://art-and-craft-server-jn7o6shaj.vercel.app/myPaintings?email=${email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

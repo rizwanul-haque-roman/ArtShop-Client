@@ -16,9 +16,12 @@ const MyListCard = ({ painting, myPaintings, setMyPaintings }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/paintings/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://art-and-craft-server-jn7o6shaj.vercel.app/paintings/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

@@ -5,7 +5,7 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/testimonial")
+    fetch("https://art-and-craft-server-jn7o6shaj.vercel.app/testimonial")
       .then((res) => res.json())
       .then((data) => setTestimonials(data));
   }, []);

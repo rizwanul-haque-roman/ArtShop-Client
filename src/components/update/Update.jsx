@@ -44,13 +44,16 @@ const Update = () => {
     console.log(updatedPainting);
 
     // sending data to the serever
-    fetch(`http://localhost:3000/paintings/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedPainting),
-    })
+    fetch(
+      `https://art-and-craft-server-jn7o6shaj.vercel.app/paintings/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedPainting),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

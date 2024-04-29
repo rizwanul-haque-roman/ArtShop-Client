@@ -47,7 +47,7 @@ const AddItem = () => {
     console.log(painting);
 
     // sending data to the serever
-    fetch("http://localhost:3000/paintings", {
+    fetch("https://art-and-craft-server-jn7o6shaj.vercel.app/paintings", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -21,12 +21,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:3000/featured"),
+        loader: () =>
+          fetch("https://art-and-craft-server-jn7o6shaj.vercel.app/featured"),
       },
       {
         path: "/allCrafts",
         element: <AllCrafts />,
-        loader: () => fetch("http://localhost:3000/paintings"),
+        loader: () =>
+          fetch("https://art-and-craft-server-jn7o6shaj.vercel.app/paintings"),
       },
       {
         path: "/addItem",
@@ -56,7 +58,9 @@ const router = createBrowserRouter([
         path: "/subcategory/:subcategory",
         element: <SubCategoryCollection />,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/subcategory/${params.subcategory}`),
+          fetch(
+            `https://art-and-craft-server-jn7o6shaj.vercel.app/subcategory/${params.subcategory}`
+          ),
       },
       {
         path: "/details/:id",
@@ -66,7 +70,9 @@ const router = createBrowserRouter([
           </PrivateRout>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/paintings/${params.id}`),
+          fetch(
+            `https://art-and-craft-server-jn7o6shaj.vercel.app/paintings/${params.id}`
+          ),
       },
       {
         path: "/update/:id",
@@ -76,7 +82,9 @@ const router = createBrowserRouter([
           </PrivateRout>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/paintings/${params.id}`),
+          fetch(
+            `https://art-and-craft-server-jn7o6shaj.vercel.app/paintings/${params.id}`
+          ),
       },
     ],
   },

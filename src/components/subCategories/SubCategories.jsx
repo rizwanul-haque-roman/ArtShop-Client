@@ -11,7 +11,7 @@ const SubCategories = () => {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/subCategories")
+    fetch("https://art-and-craft-server-jn7o6shaj.vercel.app/subCategories")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
