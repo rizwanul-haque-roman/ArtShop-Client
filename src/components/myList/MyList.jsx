@@ -5,6 +5,7 @@ import MyListCard from "../myListCard/MyListCard";
 const MyList = () => {
   const { user } = useContext(AuthContext);
   const [myPaintings, setMyPaintings] = useState([]);
+  const [paintings, setPaintings] = useState([]);
   const { email } = user;
   const [customization, setCustomization] = useState("");
 
@@ -12,15 +13,32 @@ const MyList = () => {
     setCustomization(event.target.value);
   };
 
+  console.log(customization);
+  console.log("paintings:", paintings);
+
   useEffect(() => {
     fetch(`http://localhost:3000/myPaintings?email=${email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setMyPaintings(data);
+        setPaintings(data);
+
+        if (customization === "Yes") {
+          const customizable = paintings.filter(
+            (item) => item.customization === "Yes"
+          );
+          console.log(customizable);
+          setMyPaintings(customizable);
+        } else if (customization === "No") {
+          const customizable = paintings.filter(
+            (item) => item.customization === "No"
+          );
+          console.log(customizable);
+          setMyPaintings(customizable);
+        }
       });
-  }, [email]);
-  console.log(customization);
+  }, [email, customization]);
 
   return (
     <div className="w-11/12 lg:container mx-auto">
