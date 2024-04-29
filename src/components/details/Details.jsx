@@ -48,11 +48,6 @@ const Details = () => {
               {painting.stockStatus}{" "}
             </p>
           </div>
-          <div className="mt-6">
-            <button className="btn text-xl bg-plt-four hover:bg-plt-five text-white">
-              Order a Piece
-            </button>
-          </div>
         </div>
       </div>
     </div>

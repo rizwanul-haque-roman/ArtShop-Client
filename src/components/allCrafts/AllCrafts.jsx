@@ -7,7 +7,7 @@ const AllCrafts = () => {
   return (
     <div>
       <div className="font-zilla w-11/12 lg:container mx-auto">
-        <h1 className="text-4xl lg:text-6xl text-black  font-heading font-bold text-left my-6">
+        <h1 className="text-4xl lg:text-6xl font-heading font-bold text-left my-6">
           View All of Our{" "}
           <span className="text-plt-five md:hidden lg:hidden">
             Paintings & Drawings

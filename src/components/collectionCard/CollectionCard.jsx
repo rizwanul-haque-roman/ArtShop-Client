@@ -29,20 +29,22 @@ const CollectionCard = ({ painting }) => {
           <p className="text-xl py-3">{painting.short_description}</p>
           <div className="flex flex-col lg:flex-row gap-3 lg:gap-6 text-xl mt-3">
             <p>
-              <span className="font-bold">Price:</span> ${painting.price}
+              <span className="font-bold text-plt-four">Price:</span> $
+              {painting.price}
             </p>
             <div className="flex items-center gap-1">
               <p>
-                <span className="font-bold">Rating:</span> {painting.rating}
+                <span className="font-bold text-plt-four">Rating:</span>{" "}
+                {painting.rating}
               </p>
               <FaStar className="text-[#e79d2e]" />
             </div>
             <p>
-              <span className="font-bold">Processing Time:</span>{" "}
+              <span className="font-bold text-plt-four">Processing Time:</span>{" "}
               {painting.processing_time}{" "}
             </p>
           </div>
-          <div className="card-actions justify-end">
+          <div className="card-actions mt-6">
             <Link to={`/details/${painting._id}`}>
               <button className="btn text-xl bg-plt-four hover:bg-plt-five text-white">
                 View Details

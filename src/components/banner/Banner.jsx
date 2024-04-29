@@ -34,7 +34,7 @@ const Banner = () => {
               <h1 className="text-2xl lg:text-7xl font-bold text-black lg:my-6">
                 Peincil & Pen Sketch Collection
               </h1>
-              <p className="text-xl ">
+              <p className="text-xl text-black">
                 Craving art with raw emotion and intimate detail? Dive into our
                 Pencil & Pen Sketch Collection!{" "}
                 <span className="hidden lg:display">
@@ -53,7 +53,7 @@ const Banner = () => {
               <h1 className="text-2xl lg:text-7xl  font-bold text-black lg:my-6">
                 Abstract Shape Art Collection
               </h1>
-              <p className="text-xl">
+              <p className="text-xl text-black">
                 Our Abstract Shape Art Collection explodes with vibrant colors
                 and dynamic forms.{" "}
                 <span className="hidden lg:display">
@@ -71,7 +71,7 @@ const Banner = () => {
               <h1 className="text-2xl lg:text-7xl  font-bold text-black lg:my-6">
                 Landscpes and Nature Canvas Collection
               </h1>
-              <p className="text-xl">
+              <p className="text-xl text-black">
                 Unleash the majesty of the outdoors with our Landscapes & Nature
                 Canvas Collection!{" "}
                 <span className="hidden lg:display">
@@ -90,7 +90,7 @@ const Banner = () => {
               <h1 className="text-2xl lg:text-7xl  font-bold text-black lg:my-6">
                 Oil Painting Art Collection
               </h1>
-              <p className="text-xl">
+              <p className="text-xl text-black">
                 Our Oil Painting Collection offers a window into a world of rich
                 colors and captivating textures.{" "}
                 <span className="hidden lg:display">
@@ -108,7 +108,7 @@ const Banner = () => {
               <h1 className="text-2xl lg:text-7xl  font-bold text-black lg:my-6">
                 Explore Our Collection & grab One
               </h1>
-              <p className="text-xl">
+              <p className="text-xl text-black">
                 Act fast! Unveiling limited-time discounts on our exquisite
                 Drawings & Paintings Collection.{" "}
                 <span className="hidden lg:display">

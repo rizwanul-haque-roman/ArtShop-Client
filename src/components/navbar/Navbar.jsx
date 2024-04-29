@@ -1,12 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/icon.png";
 import { useContext } from "react";
 import { AuthContext } from "../auth/AuthProvider";
 import profile from "../../assets/profile-icon.png";
 import { Tooltip } from "react-tooltip";
+import Theme from "../theme/Theme";
 
 const Navbar = () => {
   const { user, logOut, loader } = useContext(AuthContext);
+
   const links = (
     <>
       <li>
@@ -74,14 +76,14 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52  text-xl font-semibold z-10"
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-xl font-semibold z-10 text-plt-four"
             >
               {links}
             </ul>
           </div>
-          <img className="w-1/4 lg:w-1/3" src={logo} alt="" />
+          <img className="w-1/4 lg:w-2/12" src={logo} alt="" />
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden text-plt-four lg:flex">
           <ul className="menu menu-horizontal px-1 text-xl font-semibold">
             {links}
           </ul>
@@ -117,7 +119,7 @@ const Navbar = () => {
                   Login
                 </button>
               </Link>
-              <p className=" text-xl font-semibold">Or</p>
+              <p className=" text-xl font-semibold text-plt-four">Or</p>
               <Link to={"/register"}>
                 <button className="btn btn-sm bg-plt-four hover:text-plt-five text-lg text-white">
                   Register
@@ -125,6 +127,7 @@ const Navbar = () => {
               </Link>
             </div>
           )}
+          <Theme />
         </div>
       </div>
     </div>

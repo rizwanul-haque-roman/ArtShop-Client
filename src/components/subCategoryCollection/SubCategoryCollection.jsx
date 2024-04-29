@@ -8,7 +8,7 @@ const SubCategoryCollection = () => {
   return (
     <div>
       <div className="font-zilla w-11/12 lg:container mx-auto">
-        <h1 className="text-4xl lg:text-6xl text-black  font-heading font-bold text-center my-6">
+        <h1 className="text-4xl lg:text-6xl font-heading font-bold text-center my-6">
           View All The Arts of{" "}
           <span className="text-plt-five">
             {subcategory[0].subcategory_Name}

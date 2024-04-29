@@ -21,7 +21,7 @@ const NewsLetter = () => {
         <input
           type="email"
           placeholder="Your email address"
-          className="w-full text-2xl border-0 outline-none py-3"
+          className="input w-full text-2xl border-0 outline-none py-3 focus:outline-none"
         />
         <button className="btn text-xl bg-plt-four text-white hover:bg-plt-five">
           Subscribe

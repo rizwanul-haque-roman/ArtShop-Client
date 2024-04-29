@@ -45,11 +45,11 @@ const MyList = () => {
       {myPaintings.length > 0 ? (
         <div>
           <div className="font-zilla">
-            <h1 className="text-4xl lg:text-6xl text-black  font-heading font-bold text-center my-6">
+            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-center my-6">
               View All Your <span className="text-plt-five">Paintings</span>
             </h1>
             <div className="flex flex-col md:flex-row lg:flex-row gap-6 items-center my-6">
-              <h3 className="text-3xl lg:text-3xl text-black  font-heading font-medium">
+              <h3 className="text-3xl lg:text-3xl font-heading font-medium">
                 Filter by Customization:
               </h3>
               <select

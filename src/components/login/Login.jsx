@@ -114,7 +114,7 @@ const Login = () => {
               <p className="text-wh font-medium">Or Sign in with</p>
             </div>
             <div className="flex gap-6 text-2xl justify-center mt-7">
-              <div className="bg-white px-3 py-2 rounded-full">
+              <div className="bg-white text-black px-3 py-2 rounded-full">
                 <Link
                   onClick={loginWithGoogle}
                   className="flex gap-2 items-center"
@@ -122,7 +122,7 @@ const Login = () => {
                   <FcGoogle /> <p className="text-base">Google</p>
                 </Link>
               </div>
-              <div className="bg-white px-3 py-2 rounded-full">
+              <div className="bg-white text-black px-3 py-2 rounded-full">
                 <Link
                   onClick={loginWithGitHub}
                   className="flex gap-2 items-center"

@@ -70,7 +70,7 @@ const AddItem = () => {
 
   return (
     <div className="w-11/12 lg:container mx-auto">
-      <div className="font-zilla bg-plt-one p-6 lg:px-28 lg:py-12 flex flex-col justify-center items-center mb-24 rounded-2xl">
+      <div className="font-zilla border-2 border-plt-four shadow-2xl p-6 lg:px-28 lg:py-12 flex flex-col justify-center items-center mb-24 rounded-2xl">
         <h1 className="text-center text-5xl font-bold">
           Publish Your <span className="text-plt-five">ArtWork</span>
         </h1>

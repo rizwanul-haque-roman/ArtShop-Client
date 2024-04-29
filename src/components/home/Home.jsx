@@ -8,7 +8,7 @@ import NewsLetter from "../newsLetter/NewsLetter";
 const Home = () => {
   const paintings = useLoaderData();
   return (
-    <div className="font-zilla">
+    <div className="font-zilla dark:bg-[#0F172A]">
       <Banner />
       <CraftItems paintings={paintings} />
       <SubCategories />
