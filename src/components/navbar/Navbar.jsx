@@ -38,7 +38,7 @@ const Navbar = () => {
             isActive ? " text-plt-four underline" : ""
           }
         >
-          Add Craft Items
+          Add Craft Item
         </NavLink>
       </li>
       <li>
