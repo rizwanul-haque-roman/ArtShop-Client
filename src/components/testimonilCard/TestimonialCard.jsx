@@ -6,7 +6,7 @@ const TestimonialCard = ({ testimonial }) => {
     <div>
       <div
         className="card flex flex-col gap-6 card-side bg-base-100 items-center shadow-xl p-6 border"
-        data-aos="fade-right"
+        data-aos="fade-up"
         data-aos-duration="1500"
       >
         <img

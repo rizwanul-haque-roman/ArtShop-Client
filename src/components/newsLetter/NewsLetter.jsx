@@ -1,6 +1,6 @@
 const NewsLetter = () => {
   return (
-    <div>
+    <div className="w-11/12 lg:container mx-auto">
       <h1
         className="text-4xl lg:text-5xl text-plt-five font-heading font-bold text-center my-6"
         data-aos="fade-up"

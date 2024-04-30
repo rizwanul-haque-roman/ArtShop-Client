@@ -5,8 +5,8 @@ import { Typewriter } from "react-simple-typewriter";
 const AllCrafts = () => {
   const paintings = useLoaderData();
   return (
-    <div>
-      <div className="font-zilla w-11/12 lg:container mx-auto">
+    <div className="w-11/12 lg:container mx-auto">
+      <div className="font-zilla ">
         <h1 className="text-4xl lg:text-6xl font-heading font-bold text-left my-6">
           View All of Our{" "}
           <span className="text-plt-five md:hidden lg:hidden">
@@ -37,7 +37,7 @@ const AllCrafts = () => {
           ignite your artistic spark.
         </p>
       </div>
-      <div className="overflow-x-auto w-11/12 lg:container mx-auto my-12 lg:my-24 border-2 border-plt-five rounded-2xl p-6 font-zilla">
+      <div className="overflow-x-auto w-auto mx-auto my-12 lg:my-24 border-2 border-plt-five rounded-2xl p-6 font-zilla">
         <table className="table">
           {/* head */}
           <thead>

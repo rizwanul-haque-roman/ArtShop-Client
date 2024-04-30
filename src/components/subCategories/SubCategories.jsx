@@ -44,11 +44,11 @@ const SubCategories = () => {
   };
 
   return (
-    <div className="my-24">
+    <div className="my-12 lg:my-24 w-11/12 lg:container mx-auto">
       {loader ? (
         <span className="loading loading-infinity loading-lg"></span>
       ) : (
-        <div className="w-11/12 lg:container mx-auto mt-6 lg:mt-24">
+        <div className=" mt-6 lg:mt-24">
           <h1
             className="text-4xl lg:text-5xl text-plt-five font-heading font-bold text-center my-6"
             data-aos="fade-up"
@@ -81,10 +81,10 @@ const SubCategories = () => {
               ))}
             </Slider>
           </div>
-          <div className="display lg:hidden">
+          <div className="w-11/12 mx-auto display lg:hidden">
             <div
               className="slider-container"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-duration="1500"
             >
               <Slider {...settings_sm}>
