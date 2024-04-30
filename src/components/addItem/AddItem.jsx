@@ -211,7 +211,7 @@ const AddItem = () => {
               <input
                 type="text"
                 name="user_name"
-                value={user.displayName}
+                defaultValue={user.displayName}
                 className="input input-bordered w-full"
               />
             </label>
