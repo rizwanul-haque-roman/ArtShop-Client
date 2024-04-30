@@ -89,7 +89,7 @@ const MyList = () => {
             </div>
           ) : (
             <div className="min-h-[70vh]  font-zilla flex flex-col justify-center items-center ">
-              <h1 className="text-4xl lg:text-6xl text-black  font-heading font-bold my-6">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold my-6">
                 You have not added any{" "}
                 <span className="text-plt-five"> Paintings</span>
               </h1>
@@ -105,6 +105,3 @@ const MyList = () => {
 };
 
 export default MyList;
-/**
- *
- */
