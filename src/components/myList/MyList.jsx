@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../auth/AuthProvider";
 import MyListCard from "../myListCard/MyListCard";
+import { Link } from "react-router-dom";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -88,14 +89,39 @@ const MyList = () => {
               </div>
             </div>
           ) : (
-            <div className="min-h-[70vh]  font-zilla flex flex-col justify-center items-center ">
+            <div className="min-h-[70vh]  font-zilla flex flex-col justify-center items-start ">
               <h1 className="text-4xl lg:text-6xl font-heading font-bold my-6">
                 You have not added any{" "}
                 <span className="text-plt-five"> Paintings</span>
               </h1>
               <p className="text-3xl">
-                Please add your paintings to view them here
+                Please add your paintings to view them here. Here&apos;s how:
               </p>
+              <div className="text-left mt-4 text-xl">
+                <li>
+                  Go to{" "}
+                  <a
+                    className="hover:underline text-blue-500 font-bold"
+                    href="https://postimages.org/"
+                    target="_blank"
+                  >
+                    Postimage
+                  </a>{" "}
+                  and upload your painting.
+                </li>
+                <li>Copy Direct Link</li>
+                <li>
+                  Paste the link in the url input field of{" "}
+                  <Link
+                    className="font-bold text-plt-four hover:underline"
+                    to={"/addItem"}
+                  >
+                    Add Craft Item
+                  </Link>
+                </li>
+                <li>Fill the rest of the form</li>
+                <li>Submit the form</li>
+              </div>
             </div>
           )}
         </div>
